@@ -8,12 +8,20 @@ import com.test.ilslv.weaterapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    WeatherFragment weatherFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        weatherFragment = new WeatherFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.weatherFragmentContainer, new WeatherFragment());
+        fragmentTransaction.replace(R.id.weatherFragmentContainer, weatherFragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

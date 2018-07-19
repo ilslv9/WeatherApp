@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WeaterApp</string>
+    <string name="date_hint">date:</string>
+    <string name="day_hint">day:</string>
+    <string name="min_hint">min:</string>
+    <string name="max_hint">max:</string>
+    <string name="weather_hint">weather:</string>
 </resources>

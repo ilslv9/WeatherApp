@@ -28,11 +28,6 @@ public class WeatherPresenterImpl implements WeatherContract.WeatherPresenter, W
     }
 
     @Override
-    public void onDestroy() {
-        weatherView = null;
-    }
-
-    @Override
     public void onFinished(List<WeatherDay> days) {
         weatherView.showLoading(false);
         weatherView.showData(days);

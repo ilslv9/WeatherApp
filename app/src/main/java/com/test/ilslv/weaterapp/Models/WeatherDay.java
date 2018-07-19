@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
+import java.util.List;
 
 public class WeatherDay {
 
@@ -13,6 +14,8 @@ public class WeatherDay {
     @Expose
     @SerializedName("temp")
     Temperature temperature;
+    @Expose
+    List<Weather> weather;
 
     public long getDate() {
         return date;
@@ -28,5 +31,13 @@ public class WeatherDay {
 
     public void setTemperature(Temperature temperature) {
         this.temperature = temperature;
+    }
+
+    public List<Weather> getWeather() {
+        return weather;
+    }
+
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 }

@@ -13,7 +13,6 @@ public interface WeatherContract {
     interface WeatherPresenter{
         void onCreate(WeatherView weatherView);
         void loadingData();
-        void onDestroy();
     }
 
     interface WeatherInteractor{
