@@ -11,10 +11,6 @@ public class WeatherModel {
     @SerializedName("list")
     private List<WeatherDay> weatherDayList;
 
-    public WeatherModel(List<WeatherDay> weatherDayList) {
-        this.weatherDayList = weatherDayList;
-    }
-
     public List<WeatherDay> getWeatherDayList() {
         return weatherDayList;
     }

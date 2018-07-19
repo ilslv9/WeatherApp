@@ -9,21 +9,16 @@ public class WeatherDay {
 
     @Expose
     @SerializedName("dt")
-    Date date;
+    long date;
     @Expose
     @SerializedName("temp")
     Temperature temperature;
 
-    public WeatherDay(Date date, Temperature temperature) {
-        this.date = date;
-        this.temperature = temperature;
-    }
-
-    public Date getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(long date) {
         this.date = date;
     }
 

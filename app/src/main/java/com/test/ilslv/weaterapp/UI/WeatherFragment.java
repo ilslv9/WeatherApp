@@ -38,10 +38,18 @@ public class WeatherFragment extends Fragment implements WeatherContract.Weather
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         WeatherApp.getWeatherComponent().injet(this);
+        weatherPresenter.onCreate(this);
+        weatherPresenter.loadingData();
     }
 
     @Override
-    public void showLoading() {
+    public void onDestroy() {
+        super.onDestroy();
+        weatherPresenter.onDestroy();
+    }
+
+    @Override
+    public void showLoading(Boolean isLoading) {
 
     }
 

@@ -1,5 +1,7 @@
 package com.test.ilslv.weaterapp.DI;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.test.ilslv.weaterapp.Domain.WeatherContract;
 import com.test.ilslv.weaterapp.Domain.WeatherInteractorImpl;
 import com.test.ilslv.weaterapp.Domain.WeatherPresenterImpl;

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface WeatherContract {
     interface WeatherView{
-        void showLoading();
+        void showLoading(Boolean isLoading);
         void showData(List<WeatherDay> days);
         void showError();
     }

@@ -6,15 +6,9 @@ public class Temperature {
     @Expose
     double day;
     @Expose
-    double mix;
+    double min;
     @Expose
     double max;
-
-    public Temperature(double day, double mix, double max) {
-        this.day = day;
-        this.mix = mix;
-        this.max = max;
-    }
 
     public double getDay() {
         return day;
@@ -24,12 +18,12 @@ public class Temperature {
         this.day = day;
     }
 
-    public double getMix() {
-        return mix;
+    public double getMin() {
+        return min;
     }
 
-    public void setMix(double mix) {
-        this.mix = mix;
+    public void setMin(double min) {
+        this.min = min;
     }
 
     public double getMax() {
