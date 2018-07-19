@@ -1,0 +1,27 @@
+package com.test.ilslv.weaterapp.Domain;
+
+import com.test.ilslv.weaterapp.Models.WeatherDay;
+
+import java.util.List;
+
+public interface WeatherContract {
+    interface WeatherView{
+        void showLoading();
+        void showData(List<WeatherDay> days);
+        void showError();
+    }
+    interface WeatherPresenter{
+        void onCreate(WeatherView weatherView);
+        void loadingData();
+        void onDestroy();
+    }
+
+    interface WeatherInteractor{
+        void getWeather(final OnFinishedListener onFinishedListener);
+
+        interface OnFinishedListener{
+            void onFinished(List<WeatherDay> days);
+            void onFailure(Throwable t);
+        }
+    }
+}
